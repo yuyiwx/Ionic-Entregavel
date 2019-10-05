@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button text="Favoritos"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        Moedas
+    </ion-title>
+  </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-button *ngFor = "let coin of Fav_Moedas"
+        color="light" expand="block" (click) = "Favorito(coin)">{{coin.getNome()}}</ion-button>
+  </ion-content>
+  

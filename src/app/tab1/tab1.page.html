@@ -1,0 +1,121 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Moedas
+        </ion-title>
+        <ion-buttons slot="primary">
+            <ion-button [routerLink]="['/profile']">
+                <ion-icon slot="icon-only" name="contact"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <br>
+    <ion-card *ngFor="let coin of Moedas">
+            <div class="foto">
+                    <img src="{{'../../assets/' + coin.getNome() + '.png'}}"> 
+                    <!--ESSA PORRA DE IMAGEM DINAMICA SRC -->
+                </div>
+    
+                <ion-card-header>
+                    <ion-card-title>
+                        {{coin.getNome()}}
+                        <div class="money">
+                            <B>{{coin.getValor()}} <sup>USD</sup></B>
+                        </div>
+                    </ion-card-title>
+                </ion-card-header>
+                <ion-card-subtitle>
+                    {{coin.getSigla()}}
+                </ion-card-subtitle>
+            </ion-card>
+    <!--
+    <ion-card>
+        <div class="foto">
+            <img src="../../assets/bitcoin.png" />
+        </div>
+
+            <ion-card-header>
+                <ion-card-title>
+                    Bitcoin
+                    <div class="money">
+                        <B>10.359,50 <sup>USD</sup></B>
+                    </div>
+                </ion-card-title>
+            </ion-card-header>
+            <ion-card-subtitle>
+                BTC
+            </ion-card-subtitle>
+        </ion-card>
+        <ion-card>
+            <div class="foto">
+                <img src="../../assets/ethereum.png" />
+            </div>
+            <ion-card-header>
+                <ion-card-title>Ethereum
+                    <div class="money">
+                        <B>181,16 <sup>USD</sup></B>
+                    </div>
+                </ion-card-title>
+            </ion-card-header>
+            <ion-card-subtitle>
+                ETH
+            </ion-card-subtitle>
+        </ion-card>
+        <ion-card>
+            <div class="foto">
+                <img src="../../assets/monero.png" />
+            </div>
+            <ion-card-header>
+                <ion-card-title>Monero
+                    <div class="money">
+                        <B>75,46 <sup>USD</sup></B>
+                    </div>
+                </ion-card-title>
+            </ion-card-header>
+            <ion-card-subtitle>
+                XMR
+            </ion-card-subtitle>
+        </ion-card>
+        
+        <ion-card>
+            <div class="foto">
+                <img src="../../assets/litecoin.png" />
+            </div>
+            <ion-card-header>
+                <ion-card-title>Litecoin
+                    <div class="money">
+                        <B>72,12 <sup>USD</sup></B>
+                    </div>
+                </ion-card-title>
+            </ion-card-header>
+            <ion-card-subtitle>
+                LTC
+            </ion-card-subtitle>
+        </ion-card>
+    -->
+        <!--<ion-list lines="none">
+            <ion-list-header>
+                <ion-label>Resources</ion-label>
+            </ion-list-header>
+            <ion-item href="https://ionicframework.com/docs/">
+                <ion-icon slot="start" color="medium" name="book"></ion-icon>
+                <ion-label>Ionic Documentation</ion-label>
+            </ion-item>
+            <ion-item href="https://ionicframework.com/docs/building/scaffolding">
+                <ion-icon slot="start" color="medium" name="build"></ion-icon>
+                <ion-label>Scaffold Out Your App</ion-label>
+            </ion-item>
+            <ion-item href="https://ionicframework.com/docs/layout/structure">
+                <ion-icon slot="start" color="medium" name="grid"></ion-icon>
+                <ion-label>Change Your App Layout</ion-label>
+            </ion-item>
+            <ion-item href="https://ionicframework.com/docs/theming/basics">
+                <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
+                <ion-label>Theme Your App</ion-label>
+            </ion-item>
+        </ion-list>
+    -->
+        </ion-content>
